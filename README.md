@@ -34,7 +34,7 @@ bash
 Pengunjung pengunjung = new Pengunjung(nama, id, durasi);
 
 
-3. *Atribut* adalah variabel yang ada dalam class. Pada kode ini, nama dan npm adalah contoh atribut.
+3. *Atribut* adalah variabel yang ada dalam class. Pada kode ini, nama dan id adalah contoh atribut.
 
 bash
 String nama;
@@ -102,7 +102,7 @@ public double hitungBiaya() {
 }
 
 
-10. *Seleksi* adalah statement kontrol yang digunakan untuk membuat keputusan berdasarkan kondisi. Pada kode ini, digunakan seleksi if else dalam method getFakultas dan seleksi switch dalam method getProdi.
+10. *Seleksi* adalah statement kontrol yang digunakan untuk membuat keputusan berdasarkan kondisi. Pada kode ini, digunakan seleksi if else dalam method getTransaksi .
 
 bash
 if (berat > 10) {
@@ -124,18 +124,32 @@ for (int i = 0; i < daftarIkan.length; i++) {
 12. *Input Output Sederhana* digunakan untuk menerima input dari user dan menampilkan output ke user. Pada kode ini, digunakan class Scanner untuk menerima input dan method System.out.println untuk menampilkan output.
 
 bash
-System.out.println("\n--- Nota Transaksi ---");
-        System.out.println("Nama: " + pengunjung.getNama());
-        System.out.println("Jenis Ikan: " + ikan.getJenis());
-        System.out.println("Berat: " + berat + " kg");
-        System.out.println("Total Bayar: Rp " + hitungBiaya());
+Scanner input = new Scanner(System.in);
 
+        Ikan[] daftarIkan = {
+            new Ikan("Lele", 20000, 50),
+            new Ikan("Nila", 25000, 30),
+            new Ikan("Gurame", 30000, 20)
+        };
 
-13. *Array* adalah struktur data yang digunakan untuk menyimpan beberapa nilai dalam satu variabel. Pada kode ini, MahasiswaDetail[] mahasiswas = new MahasiswaDetail[2]; adalah contoh penggunaan array.
+        System.out.println("=== Tempat Pemancingan Jaya ===");
+
+        try {
+            System.out.print("Masukkan nama pengunjung: ");
+            String nama = input.nextLine();
+            System.out.print("Masukkan ID pengunjung: ");
+            String id = input.nextLine();
+            System.out.print("Lama memancing (jam): ");
+            int durasi = input.nextInt();
+
+13. *Array* adalah struktur data yang digunakan untuk menyimpan beberapa nilai dalam satu variabel. Pada kode ini, adalah contoh penggunaan array.
 
 bash
-MahasiswaDetail[] mahasiswas = new MahasiswaDetail[2];
-
+Ikan[] daftarIkan = {
+            new Ikan("Lele", 20000, 50),
+            new Ikan("Nila", 25000, 30),
+            new Ikan("Gurame", 30000, 20)
+        };
 
 14. *Error Handling* digunakan untuk menangani error yang mungkin terjadi saat runtime. Pada kode ini, digunakan try catch untuk menangani error.
 
